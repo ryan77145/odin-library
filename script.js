@@ -1,4 +1,6 @@
+// Global Declarations
 const library = [];
+const shelf = document.querySelector('.library');
 
 class Books {
     constructor(title, author) {
@@ -7,20 +9,27 @@ class Books {
     }
 }
 
-
 function createBook(bookTitle, bookAuthor) {
-    const book = {};
+    const book = new Books(bookTitle, bookAuthor);
     book.id = crypto.randomUUID();
     book.title = bookTitle;
     book.author = bookAuthor;
-
+    
     library.push(book);
     return library
 }
 
-console.log(createBook("Harry Potter", "JK Rowling"));
-console.log(library);
+const displayBooks = function() {
+    shelf.innerHTML = '';
+    library.forEach(function(book) {
+        const individualBooks = document.createElement('div');
+        individualBooks.textContent = `${book.title}, ${book.author}`;
+    shelf.appendChild(individualBooks);
+})}
 
-library.forEach(function(book) {
-    console.log(book.title, book.author)
-})
+createBook('Harry Potter', 'JK Rowling');
+createBook('Green Eggs and Ham', 'Dr. Suess');
+displayBooks();
+
+
+
