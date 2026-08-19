@@ -1,0 +1,19 @@
+.shelf {
+    border: 10px solid burlywood;
+    height: 500px;
+}
+
+.books {
+    border-bottom: 8px solid burlywood;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+body {
+    font-family: cursive;
+}
+
+h1 {
+    text-align: center;
+}

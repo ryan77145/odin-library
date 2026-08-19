@@ -1,6 +1,6 @@
 // Global Declarations
 const library = [];
-const shelf = document.querySelector('.library');
+const shelf = document.querySelector('.shelf');
 
 class Books {
     constructor(title, author) {
@@ -23,6 +23,7 @@ const displayBooks = function() {
     shelf.innerHTML = '';
     library.forEach(function(book) {
         const individualBooks = document.createElement('div');
+        individualBooks.setAttribute("class", "books");
         individualBooks.textContent = `${book.title}, ${book.author}`;
     shelf.appendChild(individualBooks);
 })}
