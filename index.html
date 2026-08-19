@@ -1,16 +1,35 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
     <script src="script.js" defer></script>
     <title>Library</title>
-</head>
-<body>
+  </head>
+  <body>
     <h1 class="header">Welcome To My Library</h1>
-    <div class="shelf">
-
-    </div>
-</body>
+    <form class="addBook">
+      <label for="bookTitle">Book Title: </label>
+      <input id="bookTitle" type="text" />
+      <label for="bookAuthor">Book Author: </label>
+      <input id="bookAuthor" type="text" />
+      <label for="numberOfPages">How many pages?</label>
+      <select id="numberOfPages" name="pages">
+        <option value="under100">Less than 100</option>
+        <option value="101-200">101-200</option>
+        <option value="201-300">201-300</option>
+        <option value="301-400">301-400</option>
+        <option value="401-500">401-500</option>
+        <option value="over500">Over 500</option>
+      </select>
+      <input id="readYes" type="radio" name="hasRead" value="read" />
+    <label for="readYes">Yes</label>
+    <input id="readNo" type="radio" name="hasRead" value="notRead" />
+    <label for="readNo">No</label>
+    <button class="submit">Submit</button>
+    </form>
+    <button class="btn">New Book</button>
+    <div class="bookShelf"></div>
+  </body>
 </html>
